@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div class="country" @click="clickeable ? $emit('click') : null">
+  <div class="country" @click="clickeable ? $emit('click') : true">
     <img
       width="200"
       height="200"

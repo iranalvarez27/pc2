@@ -19,8 +19,15 @@ export default {
 </script>
 
 <template>
-  <div class="country">
+  <div class="country">   
     <!--TODO: Poblar el HTML con las propiedades. Usar https://countryflagsapi.com para la bandera-->
+
+    <h1>{{ country.name }}</h1>
+    <img :src="`https://www.countryflags.io/${country.iso2}/flat/64.png`" alt="">
+    <h2>Capital: {{ country.capital }}</h2>
+    <h3>Moneda: {{ country.currency_name }} ({{ country.currency }})</h3>
+    <h3>Region: {{ country.region }}</h3>
+
     <img
       width="400"
       height="400"

@@ -57,7 +57,7 @@ export default {
       placeholder="Adivina la capital"
       v-model="capital"
       @input="setCapital"
-
+      
     />
     <button @click="adivinarCapital">Adivina!</button>
     <div class="countries-container">

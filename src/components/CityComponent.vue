@@ -1,5 +1,5 @@
 <template>
-    <div class="country" @click="clickeable ? $emit('click') : null">
+    <div class="city" @click="clickeable ? $emit('click') : null">
         <img
           width="200"
           height="200"
