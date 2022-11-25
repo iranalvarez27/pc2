@@ -8,21 +8,29 @@ export default {
     "currency",
     "region",
     "code",
+    "clickeable",
     //TODO: crear una propiedad para determinar si al componente se le puede hacer click
   ],
 };
 </script>
 
 <template>
-  <!--TODO: Utilizar la propiedad creada para controlar el click. Cuando el componente es "clickeable", redirigir a la pagina del pais.
-  Mira las rutas para ver como redirigir al usuario.-->
-  <div
-  >
-  <!--TODO: Poblar el HTML con las propiedades. Usar https://countryflagsapi.com/png/${code}-->
-  <img
+  <div class="country" @click="clickeable ? $emit('click') : null">
+    <img
       width="200"
       height="200"
+      :src="`https://countryflagsapi.com/png/${code}`"
     />
+    <h1> {{ name }}</h1>
+    <h2>Capital: {{ capital }}</h2>
+    <h3>Moneda: {{ currency_name }} ({{ currency }})</h3>
+    <h3>Region: {{ region }}</h3>
+    
+  <!--TODO: Utilizar la propiedad creada para controlar el click. Cuando el componente es "clickeable", redirigir a la pagina del pais.
+  Mira las rutas para ver como redirigir al usuario.-->
+  
+  <!--TODO: Poblar el HTML con las propiedades. Usar https://countryflagsapi.com/png/${code}-->
+  
   </div>
 </template>
 

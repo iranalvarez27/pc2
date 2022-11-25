@@ -5,7 +5,7 @@ import CityComponent from "../components/CityComponent.vue";
 export default {
   name: "CitiesView",
   components: {
-    CityComponent,
+    CitiesComponent,
   },
   data() {
     return {
